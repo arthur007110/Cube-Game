@@ -13,7 +13,8 @@ spr_player,
 spr_player_skin03,
 spr_player_skin02,
 spr_player_skin01,
-spr_player_skin04
+spr_player_skin04,
+spr_player_skin05
 ];
 
 index = 0;

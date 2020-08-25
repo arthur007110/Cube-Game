@@ -44,6 +44,7 @@ spr_level05,
 spr_level06,
 spr_level07,
 spr_level08,
+spr_level09,
 spr_level_bonus01,
 spr_level_bonus02
 );

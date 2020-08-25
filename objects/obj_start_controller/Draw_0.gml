@@ -10,7 +10,7 @@ draw_set_valign(fa_center);
 show_debug_message(hue);
 draw_set_color(make_color_hsv(hue, 255, 255));
 
-draw_text_transformed(room_width/2, room_height/2,"Color Cube", text_size, text_size, text_angle);
+draw_text_transformed(room_width/1.5, room_height/3,"Alpha!", text_size/4, text_size/4, text_angle);
 
 draw_set_color(c_white);
 

@@ -9,7 +9,14 @@ if(ds_map_size(skins_map) == 0){
 	scr_load_skins();
 }
 
-skins = obj_skin_controller.skins;
+skins = [
+spr_player,
+spr_player_skin03,
+spr_player_skin02,
+spr_player_skin01,
+spr_player_skin04,
+spr_player_skin05
+];
 
 
 for (i = 0; i < array_length(skins); i++;)
@@ -43,10 +50,6 @@ for (i = 0; i < array_length(skins); i++;)
 		}
 	}
 }
-
-
-
-
 
 ds_map_find_first(skins_map);
 scr_save_skins();

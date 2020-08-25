@@ -13,7 +13,7 @@ function scr_skin_unlocked(skin){
 		var exists = false;
 		
 		for(var j = 0; j < size; j++){
-			if(key == sprite_get_name(skin)){
+			if(key == skin){
 				unlocked = ds_map_find_value(skins_map, key);
 				exists = true;
 				break;

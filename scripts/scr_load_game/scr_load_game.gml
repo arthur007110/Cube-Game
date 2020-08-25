@@ -8,9 +8,14 @@ function scr_load_game(){
 			obj_player.coins = ini_read_real("savegame", "coins", 0);
 			
 			var skin = ini_read_string("savegame", "player_sprite", spr_player);
-			scr_skin_unlocked(skin);
-			var unlocked = scr_skin_unlocked(skin);
-			show_debug_message(unlocked);
+			var unlocked = 0;
+			try{
+				unlocked = scr_skin_unlocked(skin);
+			}catch(e){
+				e = noone;
+				unlocked = scr_skin_unlocked(skin);
+			}
+			show_debug_message(string(unlocked) + " scr_load_game");
 			if(unlocked){
 				obj_player.player_skin = asset_get_index(skin);
 			}else{

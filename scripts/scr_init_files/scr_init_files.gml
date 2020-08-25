@@ -1,6 +1,6 @@
-/// @description Insert description here
-// You can write your code in this editor
-if(!file_exists("savedata.ini") || !file_exists("skins_map.sav")){
+// Script assets have changed for v2.3.0 see
+// https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
+function scr_init_files(){
 	ini_open("savedata.ini");
 	
 	ini_write_real("savegame", "coins", 0);
@@ -8,16 +8,17 @@ if(!file_exists("savedata.ini") || !file_exists("skins_map.sav")){
 	
 	ini_close();
 	
+	
 	skins_map = ds_map_create();
-
+	
 	skins = [
 	spr_player,
 	spr_player_skin03,
 	spr_player_skin02,
 	spr_player_skin01,
-	spr_player_skin04,
-	spr_player_skin05
+	spr_player_skin04
 	];
+
 
 	for (i = 0; i < array_length(skins); i++;)
 	{
@@ -50,7 +51,6 @@ if(!file_exists("savedata.ini") || !file_exists("skins_map.sav")){
 			}
 		}
 	}
-
 	ds_map_find_first(skins_map);
 	
 	ds_map_secure_save(skins_map, "skins_map.sav");

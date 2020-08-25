@@ -5,7 +5,6 @@ function scr_save_game(){
 	
 	if(instance_exists(obj_player)){
 		ini_write_real("savegame", "coins", obj_player.coins);
-		show_message(sprite_get_name(obj_player.player_skin));
 		ini_write_string("savegame", "player_sprite", sprite_get_name(obj_player.player_skin));
 		
 		

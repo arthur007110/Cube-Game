@@ -28,4 +28,8 @@ if(hue >= 255) hue = 0;
 
 hue += 0.5;
 
+if(audio_volume < 0.8){
+	audio_volume += 0.001;
+}
 
+audio_sound_gain(snd_main_theme, audio_volume, 5000);
