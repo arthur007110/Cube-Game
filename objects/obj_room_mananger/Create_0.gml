@@ -49,7 +49,7 @@ spr_level_bonus01,
 spr_level_bonus02
 );
 
-img = level_spr; // image in which a level will be generated from
+img = spr_level_test_shooter; // image in which a level will be generated from
 w = sprite_get_width(img); // image width
 h = sprite_get_height(img); // image height
 
@@ -71,25 +71,6 @@ for (i = 0; i < w; i++) { // cycle through width of image
 		g = color_get_green(col);
 		b = color_get_blue(col);
         obj = noone; // object to create at coordinates
-
-        /*switch (col) {
-				// red represents walls
-            case (c_red):
-                obj = obj_wall;
-                break;
-				// black represents sprays
-            case (c_black):
-                obj = obj_spay;
-                break;
-                // white represents coins
-            case (c_white):
-                obj = obj_player;
-                break;
-			case (r == 0 && g == 255 && b == 0):
-                obj = obj_fade_wall;
-				show_message("room_mananger works");
-                break;
-        }*/
 		
 		if(r == 255 && g == 0 && b == 0){ // red represents walls
 			obj = obj_wall;
@@ -101,12 +82,16 @@ for (i = 0; i < w; i++) { // cycle through width of image
 			obj = obj_fade_wall;
 		}else if(r == 255 && g == 255 && b == 0){ // green represents fade walls
 			obj = obj_coin;
+		}else if(r == 255 && g == 0 && b == 255){ // green represents fade walls
+			obj = obj_shooter_h;
+		}else if(r == 0 && g == 255 && b == 255){ // green represents fade walls
+			obj = obj_shooter_v;
 		}
 
         // if there is a color match, create the associated object at the given coordinates (px * grid)
         if (obj != noone) {
 			w_obstacle = noone;
-			if(obj == obj_wall || obj == obj_fade_wall){
+			if(obj == obj_wall || obj == obj_fade_wall || obj == obj_shooter_h || obj == obj_shooter_v){
 				w_obstacle = instance_create_layer(i * cell_w, j * cell_h, "inst_Walls", obj_obstacle);
 				//w_obstacle = instance_create_depth(i * cell_w, j * cell_h, -100, obj_obstacle);
 				wall = instance_create_layer(i * cell_w, j * cell_h, "inst_Walls", obj);

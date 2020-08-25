@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"5bab07f3-6ee8-49a3-8124-86ac15c161c0","path":"sprites/spr_level_test_coin/spr_level_test_coin.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"5bab07f3-6ee8-49a3-8124-86ac15c161c0","path":"sprites/spr_level_test_coin/spr_level_test_coin.yy",},"LayerId":{"name":"4de9cf2f-c2e8-413e-b61f-2dd77820df82","path":"sprites/spr_level_test_coin/spr_level_test_coin.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"spr_level_test_coin","path":"sprites/spr_level_test_coin/spr_level_test_coin.yy",},"resourceVersion":"1.0","name":"5bab07f3-6ee8-49a3-8124-86ac15c161c0","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"5bab07f3-6ee8-49a3-8124-86ac15c161c0","path":"sprites/spr_level_test_shooter/spr_level_test_shooter.yy",},"LayerId":null,"resourceVersion":"1.0","name":"composite","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"5bab07f3-6ee8-49a3-8124-86ac15c161c0","path":"sprites/spr_level_test_shooter/spr_level_test_shooter.yy",},"LayerId":{"name":"4de9cf2f-c2e8-413e-b61f-2dd77820df82","path":"sprites/spr_level_test_shooter/spr_level_test_shooter.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"spr_level_test_shooter","path":"sprites/spr_level_test_shooter/spr_level_test_shooter.yy",},"resourceVersion":"1.0","name":"5bab07f3-6ee8-49a3-8124-86ac15c161c0","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"spr_level_test_coin","path":"sprites/spr_level_test_coin/spr_level_test_coin.yy",},
+    "spriteId": {"name":"spr_level_test_shooter","path":"sprites/spr_level_test_shooter/spr_level_test_shooter.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 15.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"248b33da-fe0e-4478-a3b7-5d9b5d9ad7b7","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5bab07f3-6ee8-49a3-8124-86ac15c161c0","path":"sprites/spr_level_test_coin/spr_level_test_coin.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"79430f6b-a5dd-4345-949f-6ab77cccc73d","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"5bab07f3-6ee8-49a3-8124-86ac15c161c0","path":"sprites/spr_level_test_shooter/spr_level_test_shooter.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"modifiers":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack",},
     ],
     "visibleRange": null,
@@ -58,9 +58,9 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"spr_level_test_coin","path":"sprites/spr_level_test_coin/spr_level_test_coin.yy",},
+    "parent": {"name":"spr_level_test_shooter","path":"sprites/spr_level_test_shooter/spr_level_test_shooter.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_level_test_coin",
+    "name": "spr_level_test_shooter",
     "tags": [],
     "resourceType": "GMSequence",
   },
@@ -72,7 +72,7 @@
     "path": "folders/Sprites/levels/template.yy",
   },
   "resourceVersion": "1.0",
-  "name": "spr_level_test_coin",
+  "name": "spr_level_test_shooter",
   "tags": [],
   "resourceType": "GMSprite",
 }

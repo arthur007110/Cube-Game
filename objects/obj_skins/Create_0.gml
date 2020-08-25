@@ -15,7 +15,12 @@ spr_player_skin03,
 spr_player_skin02,
 spr_player_skin01,
 spr_player_skin04,
-spr_player_skin05
+spr_player_skin05,
+spr_player_skin06,
+spr_player_skin07,
+spr_player_skin08,
+spr_player_skin09,
+spr_player_skin10
 ];
 
 

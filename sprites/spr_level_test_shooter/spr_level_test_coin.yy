@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_level_test_coin","path":"sprites/spr_level_test_coin/spr_level_test_coin.yy",},
     "resourceVersion": "1.3",
-    "name": "spr_level_test_coin",
+    "name": "",
     "tags": [],
     "resourceType": "GMSequence",
   },
