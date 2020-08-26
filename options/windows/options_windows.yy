@@ -1,7 +1,7 @@
 {
   "option_windows_display_name": "Color Cube",
   "option_windows_executable_name": "${Color Cube}",
-  "option_windows_version": "0.1.0.3",
+  "option_windows_version": "0.1.0.5",
   "option_windows_company_info": "Never Productions",
   "option_windows_product_info": "Color Cube",
   "option_windows_copyright_info": "(c) 2020 Never Productions",

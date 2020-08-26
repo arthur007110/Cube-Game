@@ -58,6 +58,7 @@
     {"id":{"name":"snd_coin","path":"sounds/snd_coin/snd_coin.yy",},"order":0,},
     {"id":{"name":"obj_spray","path":"objects/obj_spray/obj_spray.yy",},"order":0,},
     {"id":{"name":"obj_button_skin_selection","path":"objects/obj_button_skin_selection/obj_button_skin_selection.yy",},"order":0,},
+    {"id":{"name":"spr_level0","path":"sprites/spr_level0/spr_level0.yy",},"order":0,},
     {"id":{"name":"obj_room_mananger","path":"objects/obj_room_mananger/obj_room_mananger.yy",},"order":1,},
     {"id":{"name":"obj_room_controller","path":"objects/obj_room_controller/obj_room_controller.yy",},"order":0,},
     {"id":{"name":"obj_start_controller","path":"objects/obj_start_controller/obj_start_controller.yy",},"order":2,},
@@ -116,6 +117,7 @@
     {"folderPath":"folders/Sprites/levels/hard.yy","order":13,"resourceVersion":"1.0","name":"hard","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/levels/template.yy","order":14,"resourceVersion":"1.0","name":"template","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Sprites/levels/bonus.yy","order":15,"resourceVersion":"1.0","name":"bonus","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Sprites/levels/in-dev.yy","order":16,"resourceVersion":"1.0","name":"in-dev","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":461609314234257646,"resourceVersion":"1.0","name":"audiogroup_default","resourceType":"GMAudioGroup",},

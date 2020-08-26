@@ -9,5 +9,6 @@ with(obj_spray){
 }
 
 stage_clear = true;
+obj_room_controller.stage_clear = true;
 
 if(!alarm_get(0)) alarm[0] = room_speed * 3;

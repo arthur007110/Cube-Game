@@ -46,10 +46,11 @@ spr_level07,
 spr_level08,
 spr_level09,
 spr_level_bonus01,
-spr_level_bonus02
+spr_level_bonus02,
+spr_level_test_shooter
 );
 
-img = spr_level_test_shooter; // image in which a level will be generated from
+img = level_spr; // image in which a level will be generated from
 w = sprite_get_width(img); // image width
 h = sprite_get_height(img); // image height
 

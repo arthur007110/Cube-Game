@@ -12,6 +12,9 @@ growing = true;
 turning = true;
 
 audio_volume = 0.1;
+
+sound_ennabled = true;
+
 if(!audio_is_playing(snd_main_theme)){
-	audio_play_sound(snd_main_theme, 1, 1);
+	if(sound_ennabled) audio_play_sound(snd_main_theme, 1, 1);
 }
