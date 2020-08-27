@@ -21,8 +21,8 @@ var ii, jj;
 	for (ii = x; ii < x+64; ii+=4) { 
 		for (jj = y; jj < y+64; jj+=4) {
 			//show_message((i * cell_w)+ii);
-			instance_create_depth(x+ii-x, y + jj-y, -100, obj_spray);
+			instance_create_layer(x+ii-x, y + jj-y, "inst_Spray", obj_spray);
 		}
 	}
-
-depth = -1000;
+	
+p_light = noone;

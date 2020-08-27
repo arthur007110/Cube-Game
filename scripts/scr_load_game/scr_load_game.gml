@@ -15,7 +15,7 @@ function scr_load_game(){
 				e = noone;
 				unlocked = scr_skin_unlocked(skin);
 			}
-			show_debug_message(string(unlocked) + " scr_load_game");
+			
 			if(unlocked){
 				obj_player.player_skin = asset_get_index(skin);
 			}else{

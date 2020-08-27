@@ -10,15 +10,13 @@ global.r_w = irandom(170);
 global.g_w = irandom(170);
 global.b_w = irandom(170);
 
-global.r_s = irandom(170);
-global.g_s = irandom(170);
-global.b_s = irandom(170);
 
-
+/*
 var L1 = 0.375 * global.r_w + 0.5 * global.r_w + 0.125 * global.r_w;
 var L2, contrast_c;
 var contrast = false;
- 
+
+
 while(!contrast){
 	randomize();
 	L2 = 0.375 * global.r_s + 0.5 * global.r_s + 0.125 * global.r_s;
@@ -29,7 +27,7 @@ while(!contrast){
 		global.g_s = irandom(170);
 		global.b_s = irandom(170);
 	}
-}
+}*/
 /// Create Event of level generator object
 var img, w, h, cell_w, cell_h, surf, i, j, col, obj; // init vars
 
@@ -94,6 +92,8 @@ for (i = 0; i < w; i++) { // cycle through width of image
 			w_obstacle = noone;
 			if(obj == obj_wall || obj == obj_fade_wall || obj == obj_shooter_h || obj == obj_shooter_v){
 				w_obstacle = instance_create_layer(i * cell_w, j * cell_h, "inst_Walls", obj_obstacle);
+				
+				w_light_caster = instance_create_layer(i * cell_w, j * cell_h, "inst_Wall_Casters", obj_wall_caster);
 				//w_obstacle = instance_create_depth(i * cell_w, j * cell_h, -100, obj_obstacle);
 				wall = instance_create_layer(i * cell_w, j * cell_h, "inst_Walls", obj);
 				//wall = instance_create_depth(i * cell_w, j * cell_h, -100, obj);

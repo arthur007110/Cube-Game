@@ -1,6 +1,10 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+if(p_light == noone){
+	p_light = instance_create_layer(x, y, "inst_Player", obj_player_light);
+}
+
 image_blend = player_color;
 
 sprite_index = player_skin;
@@ -57,3 +61,6 @@ if(place_meeting(x, y + v_move, obj_obstacle) && v_move != 0){
 //move
 hspeed = h_move;
 vspeed = v_move;
+
+p_light.light[| eLight.X] = x + (sprite_width/2);
+p_light.light[| eLight.Y] = y + (sprite_height/2);

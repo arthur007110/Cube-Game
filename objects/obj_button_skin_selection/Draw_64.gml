@@ -1,5 +1,9 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+draw_set_valign(fa_center);
+draw_set_halign(fa_center);
+
 if(locked){
 	draw_set_color(c_dkgray);
 	
@@ -10,7 +14,7 @@ if(locked){
 	draw_set_alpha(1);
 	
 	draw_set_color(c_black);
-	draw_text(x, y, skin_id);
+	draw_text_transformed(x, y, skin_id, 0.5, 0.5, 0);
 	
 	
 	draw_set_font(fnt_debug);
@@ -29,8 +33,8 @@ if(locked){
 	draw_set_alpha(1);
 	
 	draw_set_color(c_lime);
-	draw_text(x, y, skin_id);
+	draw_text_transformed(x, y, skin_id, 0.5, 0.5, 0);
 }else{
 	draw_set_color(c_yellow);
-	draw_text(x, y, skin_id);
+	draw_text_transformed(x, y, skin_id, 0.5, 0.5, 0);
 }
