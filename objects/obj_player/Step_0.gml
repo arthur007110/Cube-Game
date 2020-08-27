@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(global.paused){ 
+	hspeed = 0;
+	vspeed = 0;
+	exit;
+}
+
 
 if(p_light == noone){
 	p_light = instance_create_layer(x, y, "inst_Player", obj_player_light);

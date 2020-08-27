@@ -1,5 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
+if(global.paused) exit;
+
 
 if(passable && obstacle != noone){
 	instance_destroy(obstacle);

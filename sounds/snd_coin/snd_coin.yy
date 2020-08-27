@@ -13,8 +13,8 @@
   "soundFile": "snd_coin.mp3",
   "duration": 0.269,
   "parent": {
-    "name": "Sounds",
-    "path": "folders/Sounds.yy",
+    "name": "fx",
+    "path": "folders/Sounds/fx.yy",
   },
   "resourceVersion": "1.0",
   "name": "snd_coin",

@@ -22,7 +22,7 @@ function scr_load_game(){
 				obj_player.player_skin = spr_player;
 			}
 			
-		}else{
+		}else if(instance_exists(obj_skin_controller)){
 			obj_skin_controller.coins = ini_read_real("savegame", "coins", 0);
 		
 			obj_skin_controller.player_skin = asset_get_index(ini_read_string("savegame", "player_sprite", spr_player));

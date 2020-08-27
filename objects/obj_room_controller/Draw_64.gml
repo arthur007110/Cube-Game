@@ -19,13 +19,16 @@ if(show_info){//only show if active
 	//set specific font
 	draw_set_font(fnt_debug);
 	draw_set_halign(fa_left);
-	draw_set_color(c_black);
+	draw_set_color(c_white);
 	
 	//version infos
-	draw_text(10, 10, "Game Version: " + string(GM_version));
+	draw_text(10, 50, "Game Version: " + string(GM_version));
+	
+	var outof = game_get_speed(gamespeed_fps);
+	draw_text(10, 70, "Fps: " + string(fps) + "/" + string(outof));
 
 	//player possition
-	draw_text(10, 30, "Player Position: x: " + string(obj_player.x) + " y: " + string(obj_player.y));
+	draw_text(10, 90, "Player Position: x: " + string(obj_player.x) + " y: " + string(obj_player.y));
 	
 	//how many pixels to paint
 	var painteds = 0;
@@ -33,5 +36,9 @@ if(show_info){//only show if active
 		if(painted) painteds++;
 	}
 	
-	draw_text(10, 50, "Remaing to Paint: " + string((instance_number(obj_spray) - painteds)/256) + " Total: " + string(instance_number(obj_spray)/256));
+	draw_text(10, 110, "Remaing to Paint: " + string((instance_number(obj_spray) - painteds)/256) + " Total: " + string(instance_number(obj_spray)/256));
+	
+	draw_text(10, 130, "Level Clear: " + string(stage_clear));
+	
+	draw_text(10, 150, "Coins to Gain: " + string(coins));
 }

@@ -4,6 +4,6 @@ obstacle = noone;
 
 shoot_time = 0.8;
 
-image_blend = make_color_rgb(global.r_w + 10, global.g_w + 10, global.b_w + 10);
+image_blend = make_color_rgb(200, 200, 200);
 
 alarm[0] = room_speed * shoot_time;

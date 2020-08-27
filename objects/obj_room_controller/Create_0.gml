@@ -7,12 +7,14 @@ show_points = false;
 
 total_coins = 15;
 
+room_time = 10;
+
 border = 200;
 
-coins = 15;
+coins = total_coins;
 
 stage_clear = false;
 
 scr_load_game();
 
-alarm[0] = room_speed * 10;
+alarm[0] = room_speed * room_time;

@@ -2,6 +2,7 @@
 // You can write your code in this editor
 
 draw_set_color(make_color_rgb(5, 5, 5));
+draw_set_alpha(1);
 var x1, x2, y1, y2;
 x1 = camera_get_view_x(view_camera[0]) + left;
 x2 = camera_get_view_x(view_camera[0]) + right;

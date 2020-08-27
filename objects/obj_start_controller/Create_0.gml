@@ -20,6 +20,12 @@ music_volume = obj_game_controller.music_volume;
 
 sound_ennabled = true;
 
+if(audio_is_playing(snd_level_music01) ||
+   audio_is_playing(snd_level_music02) ||
+   audio_is_playing(snd_level_music03)){
+	audio_stop_all();	   
+}
+
 if(!audio_is_playing(snd_main_theme)){
 	if(sound_ennabled) audio_play_sound(snd_main_theme, 1, 1);
 }

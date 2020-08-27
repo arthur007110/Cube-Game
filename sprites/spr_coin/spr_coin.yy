@@ -69,8 +69,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"cc76e2a4-da0e-4b91-97ab-26ba14ffb2f1","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "misc",
+    "path": "folders/Sprites/misc.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_coin",

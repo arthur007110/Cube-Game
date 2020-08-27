@@ -2,4 +2,4 @@
 // You can write your code in this editor
 scr_save_game();
 
-room_restart();
+scr_sidefade(rm_level, 2);

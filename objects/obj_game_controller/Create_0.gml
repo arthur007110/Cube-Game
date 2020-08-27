@@ -6,3 +6,5 @@ sound_fx_volume = 0.02;
 
 spray_color = c_red;
 
+global.paused = false;
+

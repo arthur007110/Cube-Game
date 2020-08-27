@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //set color to level choose color
-image_blend = make_color_rgb(global.r_w, global.g_w, global.b_w);
+//image_blend = make_color_rgb(global.r_w, global.g_w, global.b_w);
 
 //time to change from passable to not passable
 time_transition = 2;
@@ -12,8 +12,6 @@ obstacle = noone;
 
 //decide if can or not pass through
 passable = false;
-
-set_not_passable = false;
 
 //change alpha to invisible
 disappearing = false;

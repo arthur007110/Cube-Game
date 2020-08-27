@@ -24,8 +24,8 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "controllers",
-    "path": "folders/Objects/controllers.yy",
+    "name": "game_controllers",
+    "path": "folders/Objects/controllers/game_controllers.yy",
   },
   "resourceVersion": "1.0",
   "name": "obj_skins",
