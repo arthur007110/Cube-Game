@@ -7,6 +7,7 @@ if(!locked){
 }
 if(locked && obj_skin_controller.coins >= skin_price){
 	
+	audio_play_sound(snd_button_confirmed, 1, 0);
 	obj_skin_controller.coins -= skin_price;
 	locked = false;
 	ds_map_replace(obj_skins.skins_map, sprite_get_name(skin), 1);

@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"53260a49-0d7f-4348-bcc9-d2730f1e206c","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "template",
-    "path": "folders/Sprites/levels/template.yy",
+    "name": "hard",
+    "path": "folders/Sprites/levels/hard.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_level08",

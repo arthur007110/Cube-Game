@@ -25,6 +25,7 @@ if(stage_clear && border < room_width){
 		border += 10;
 	}
 }
-if(border > (room_width - 10) && alarm_get(1) == -1){
-	alarm[1] = room_speed;	
+if(border > (room_width - 10) && alarm_get(1) == -1 && !added_coins){
+	alarm[1] = room_speed/ 1.5;
+	added_coins = true;
 }

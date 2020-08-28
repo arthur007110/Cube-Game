@@ -1,4 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-alarm[0] = 1;
+image_blend = obj_game_controller.spray_color;
+painted = true;
+//alarm[0] = 1;
 

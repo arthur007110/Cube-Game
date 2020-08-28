@@ -26,8 +26,28 @@ function scr_load_game(){
 			obj_skin_controller.coins = ini_read_real("savegame", "coins", 0);
 		
 			obj_skin_controller.player_skin = asset_get_index(ini_read_string("savegame", "player_sprite", spr_player));
+			
+			obj_skin_controller.spray_color = ini_read_string("savegame", "spray_color", "red");
 		}
 	
+		if(instance_exists(obj_game_controller)){
+			
+			color = ini_read_string("savegame", "spray_color", "red");
+			blend = c_red;
+			switch(color){
+				case "red":
+					blend = c_red;
+					break;
+				case "green":
+					blend = c_green;
+					break;
+				case "blue":
+					blend = c_blue;
+					break;
+			}
+			
+			obj_game_controller.spray_color = blend;
+		}
 		ini_close();
 	}else{
 		scr_save_game();

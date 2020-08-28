@@ -8,7 +8,22 @@ if(global.paused){
 
 
 if(p_light == noone){
-	p_light = instance_create_layer(x, y, "inst_Player", obj_player_light);
+	
+	switch(obj_game_controller.spray_color){
+		case c_red:
+			p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_red);
+			break;
+		case c_green:
+			p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_green);
+			break;
+		case c_blue:
+			p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_blue);
+			break;
+		default:
+			p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_red);
+			break;
+	}
+	
 }
 
 image_blend = player_color;
@@ -22,21 +37,25 @@ if(!in_move){
 		h_move = -velocity;
 		v_move = 0;
 		in_move = true;
+		audio_play_sound(snd_player_move, 1, 0);
 	}
 	if(keyboard_check_pressed(ord("D"))){
 		h_move = velocity;
 		v_move = 0;
 		in_move = true;
+		audio_play_sound(snd_player_move, 1, 0);
 	}
 	if(keyboard_check_pressed(ord("W"))){
 		v_move = -velocity;
 		h_move = 0;
 		in_move = true;
+		audio_play_sound(snd_player_move, 1, 0);
 	}
 	if(keyboard_check_pressed(ord("S"))){
 		v_move = velocity;
 		h_move = 0;
 		in_move = true;
+		audio_play_sound(snd_player_move, 1, 0);
 	}
 }
 
@@ -62,7 +81,6 @@ if(place_meeting(x, y + v_move, obj_obstacle) && v_move != 0){
 	v_move = 0;
 	in_move = false;
 }
-
 
 //move
 hspeed = h_move;

@@ -13,8 +13,9 @@ border = 200;
 
 coins = total_coins;
 
+added_coins = false;
+
 stage_clear = false;
 
-scr_load_game();
-
 alarm[0] = room_speed * room_time;
+

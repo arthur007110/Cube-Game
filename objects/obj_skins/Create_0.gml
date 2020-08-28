@@ -23,7 +23,8 @@ spr_player_skin09,
 spr_player_skin10,
 spr_player_skin11,
 spr_player_skin12,
-spr_player_skin13
+spr_player_skin13,
+spr_player_skin14
 ];
 
 

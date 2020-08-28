@@ -4,6 +4,9 @@
 if(!instance_exists(obj_game_controller)){
 	instance_create_layer(x, y, "inst_Controllers", obj_game_controller);
 	audio_sound_gain(snd_coin, obj_game_controller.sound_fx_volume, 0);
+	audio_sound_gain(snd_button_enter, obj_game_controller.sound_fx_volume, 0);
+	audio_sound_gain(snd_player_move, obj_game_controller.sound_fx_volume, 0);
+	audio_sound_gain(snd_button_confirmed, obj_game_controller.sound_fx_volume, 0);
 }
 
 text_size = 1;

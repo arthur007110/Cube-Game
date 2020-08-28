@@ -12,6 +12,8 @@ function scr_save_game(){
 		
 		ini_write_real("savegame", "coins", obj_skin_controller.coins);	
 		
+		ini_write_string("savegame", "spray_color", obj_skin_controller.spray_color);	
+		
 	}
 	
 	ini_close();

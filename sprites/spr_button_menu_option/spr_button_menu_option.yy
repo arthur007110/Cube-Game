@@ -26,7 +26,7 @@
   "frames": [
     {"compositeImage":{"FrameId":{"name":"d4543009-d377-457e-a071-3c9b8c5f0a17","path":"sprites/spr_button_menu_option/spr_button_menu_option.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
         {"FrameId":{"name":"d4543009-d377-457e-a071-3c9b8c5f0a17","path":"sprites/spr_button_menu_option/spr_button_menu_option.yy",},"LayerId":{"name":"f081f822-135a-4892-a26d-de31496b9fa0","path":"sprites/spr_button_menu_option/spr_button_menu_option.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-        {"FrameId":{"name":"d4543009-d377-457e-a071-3c9b8c5f0a17","path":"sprites/spr_button_menu_option/spr_button_menu_option.yy",},"LayerId":{"name":"7f3dc2d8-d373-486c-9944-53fa548cdec7","path":"sprites/spr_button_menu_option/spr_button_menu_option.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+        {"FrameId":{"name":"d4543009-d377-457e-a071-3c9b8c5f0a17","path":"sprites/spr_button_menu_option/spr_button_menu_option.yy",},"LayerId":{"name":"spr_button_menu_option","path":"sprites/spr_button_menu_option/spr_button_menu_option.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
       ],"parent":{"name":"spr_button_menu_option","path":"sprites/spr_button_menu_option/spr_button_menu_option.yy",},"resourceVersion":"1.0","name":"d4543009-d377-457e-a071-3c9b8c5f0a17","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
