@@ -6,7 +6,7 @@ if(global.paused){
 	}
 	exit;
 }else{
-	if(alarm_get(0) == -1){
+	if(alarm_get(0) == -1 && coins > 1){
 		alarm[0] = room_speed * 2;
 	}
 }

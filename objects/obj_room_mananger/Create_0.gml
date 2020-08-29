@@ -49,7 +49,7 @@ if(chance < 20){
 	spr_level_test_shooter
 	);
 }
-img = level_spr; // image in which a level will be generated from
+img = spr_level_base52; // image in which a level will be generated from
 w = sprite_get_width(img); // image width
 h = sprite_get_height(img); // image height
 
@@ -84,6 +84,8 @@ for (i = 0; i < w; i++) { // cycle through width of image
 			obj = obj_coin;
 		}else if(r == 255 && g == 0 && b == 255){ // pink represents shooter horizontal
 			obj = obj_shooter_h;
+		}else if(r == 0 && g == 0 && b == 255){ // cyan represents shooter vertical
+			obj = obj_times_wall;
 		}else if(r == 0 && g == 255 && b == 255){ // cyan represents shooter vertical
 			obj = obj_shooter_v;
 		}else if(r == 255 && g == 255 && b == 1){ // cyan represents shooter vertical
@@ -121,7 +123,7 @@ for (i = 0; i < w; i++) { // cycle through width of image
 			}
 			
 			w_obstacle = noone;
-			if(obj == obj_wall || obj == obj_fade_wall || obj == obj_shooter_h || obj == obj_shooter_v){
+			if(obj == obj_wall || obj == obj_fade_wall || obj == obj_shooter_h || obj == obj_shooter_v || obj == obj_times_wall){
 				w_obstacle = instance_create_layer(i * cell_w, j * cell_h, "inst_Walls", obj_obstacle);
 				
 				instance_create_layer(i * cell_w, j * cell_h, "inst_Wall_Casters", obj_wall_caster);

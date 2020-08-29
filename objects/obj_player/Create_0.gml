@@ -12,6 +12,8 @@ coins = 0;
 v_move = 0;
 h_move = 0;
 
+invencible = false;
+
 player_skin = spr_player_skin02;
 
 player_color = c_white;
