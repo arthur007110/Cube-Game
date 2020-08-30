@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 //set color to level choose color
-//image_blend = make_color_rgb(global.r_w, global.g_w, global.b_w);
+image_blend = global.w;
 
 //time to change from passable to not passable
 time_transition = 1;
@@ -22,4 +22,4 @@ disappearing = false;
 appearing = false;
 
 //set timer to start working
-alarm[0] = room_speed * time_transition/ 3;
+alarm[0] = room_speed * time_transition/ 4;

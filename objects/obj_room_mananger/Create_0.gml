@@ -4,6 +4,9 @@
 stage_clear = false;
 text_clear_x = -400;
 
+pithon = false;
+
+global.w = c_white;
 
 /*
 var L1 = 0.375 * global.r_w + 0.5 * global.r_w + 0.125 * global.r_w;
@@ -33,7 +36,8 @@ if(chance < 20){
 	level_spr = choose(
 	//bônus levels
 	spr_level_bonus01,
-	spr_level_bonus02
+	spr_level_bonus02,
+	spr_level_bonus03
 	);
 }else{
 	level_spr = choose(
@@ -46,10 +50,23 @@ if(chance < 20){
 	spr_level07,
 	spr_level08,
 	spr_level09,
-	spr_level_test_shooter
+	spr_level10,
+	spr_level11,
+	spr_level12,
+	spr_level13,
+	spr_level14,
+	spr_level15,
+	spr_level16,
+	spr_level17,
+	spr_level18,
+	spr_level19,
+	spr_level20,
+	spr_level21,
+	spr_level22,
+	spr_level23
 	);
 }
-img = spr_level_base52; // image in which a level will be generated from
+img = level_spr; // image in which a level will be generated from
 w = sprite_get_width(img); // image width
 h = sprite_get_height(img); // image height
 
@@ -94,6 +111,9 @@ for (i = 0; i < w; i++) { // cycle through width of image
 			obj = "medium";
 		}else if(r == 255 && g == 255 && b == 3){ // cyan represents shooter vertical
 			obj = "hard";
+		}else if(r == 255 && g == 255 && b == 5){ // cyan represents shooter vertical
+			pithon = true;
+			obj = obj_wall;
 		}
 
         // if there is a color match, create the associated object at the given coordinates (px * grid)
@@ -105,6 +125,9 @@ for (i = 0; i < w; i++) { // cycle through width of image
 				rm_controller.coins = 8;
 				rm_controller.room_time = 5;
 				rm_controller.alarm[0] = room_speed * rm_controller.room_time;
+				
+				global.w = c_lime;
+				
 				obj = obj_wall;
 			}else if(obj == "medium"){
 				rm_controller = instance_create_layer(x, y, "inst_Controllers", obj_room_controller);
@@ -112,6 +135,9 @@ for (i = 0; i < w; i++) { // cycle through width of image
 				rm_controller.coins = 15;
 				rm_controller.room_time = 12;
 				rm_controller.alarm[0] = room_speed * rm_controller.room_time;
+				
+				global.w = c_yellow;
+				
 				obj = obj_wall;
 			}else if(obj == "hard"){
 				rm_controller = instance_create_layer(x, y, "inst_Controllers", obj_room_controller);
@@ -119,6 +145,9 @@ for (i = 0; i < w; i++) { // cycle through width of image
 				rm_controller.coins = 20;
 				rm_controller.room_time = 20;
 				rm_controller.alarm[0] = room_speed * rm_controller.room_time;
+				
+				global.w = c_orange;
+				
 				obj = obj_wall;
 			}
 			
