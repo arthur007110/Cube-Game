@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "hard",
-    "path": "folders/Sprites/levels/hard.yy",
+    "path": "folders/Sprites/levels/singleplayer/hard.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_level17",

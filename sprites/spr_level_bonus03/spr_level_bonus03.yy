@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "bonus",
-    "path": "folders/Sprites/levels/bonus.yy",
+    "path": "folders/Sprites/levels/singleplayer/bonus.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_level_bonus03",

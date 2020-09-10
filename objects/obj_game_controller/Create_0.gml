@@ -8,3 +8,12 @@ spray_color = c_red;
 
 global.paused = false;
 
+global.level = 0;
+
+global.gamemode = "versus";
+
+global.multiplayer = true;
+
+global.colorP1 = c_red;
+
+global.colorP2 = c_blue;

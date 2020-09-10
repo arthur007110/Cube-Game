@@ -68,8 +68,8 @@
     {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"4de9cf2f-c2e8-413e-b61f-2dd77820df82","tags":[],"resourceType":"GMImageLayer",},
   ],
   "parent": {
-    "name": "template",
-    "path": "folders/Sprites/levels/template.yy",
+    "name": "in-dev",
+    "path": "folders/Sprites/levels/in-dev.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_level_test_coin",

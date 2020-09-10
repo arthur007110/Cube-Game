@@ -1,6 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
-image_blend = obj_game_controller.spray_color;
 painted = true;
-//alarm[0] = 1;
 
+paitend_by = "player1";
+
+if(!global.multiplayer){
+	image_blend = obj_game_controller.spray_color;
+}else{
+	image_blend = global.colorP1;
+}

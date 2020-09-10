@@ -14,7 +14,7 @@ h_move = 0;
 
 invencible = false;
 
-player_skin = spr_player_skin02;
+player_skin = spr_player;
 
 player_color = c_white;
 

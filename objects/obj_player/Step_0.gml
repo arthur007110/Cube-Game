@@ -8,22 +8,37 @@ if(global.paused){
 
 
 if(p_light == noone){
-	
-	switch(obj_game_controller.spray_color){
-		case c_red:
-			p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_red);
-			break;
-		case c_green:
-			p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_green);
-			break;
-		case c_blue:
-			p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_blue);
-			break;
-		default:
-			p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_red);
-			break;
+	if(!global.multiplayer){
+		switch(obj_game_controller.spray_color){
+			case c_red:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_red);
+				break;
+			case c_green:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_green);
+				break;
+			case c_blue:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_blue);
+				break;
+			default:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_red);
+				break;
+		}
+	}else{
+		switch(global.colorP1){
+			case c_red:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_red);
+				break;
+			case c_green:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_green);
+				break;
+			case c_blue:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_blue);
+				break;
+			default:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_red);
+				break;
+		}
 	}
-	
 }
 
 image_blend = player_color;

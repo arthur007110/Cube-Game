@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "easy",
-    "path": "folders/Sprites/levels/easy.yy",
+    "path": "folders/Sprites/levels/singleplayer/easy.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_level10",

@@ -4,6 +4,8 @@
 stage_clear = false;
 text_clear_x = -400;
 
+text_clear = "Stage Clear!";
+
 pithon = false;
 
 global.w = c_white;
@@ -66,7 +68,7 @@ if(chance < 20){
 	spr_level23
 	);
 }
-img = level_spr; // image in which a level will be generated from
+img = spr_level_test_multiplayer; // image in which a level will be generated from
 w = sprite_get_width(img); // image width
 h = sprite_get_height(img); // image height
 
@@ -95,6 +97,8 @@ for (i = 0; i < w; i++) { // cycle through width of image
 			obj = obj_spray;
 		}else if(r == 255 && g == 255 && b == 255){ // white represents player
 			obj = obj_player;
+		}else if(r == 150 && g == 150 && b == 150){ // white represents player
+			obj = obj_player2;
 		}else if(r == 0 && g == 255 && b == 0){ // green represents fade walls
 			obj = obj_fade_wall;
 		}else if(r == 255 && g == 255 && b == 0){ // yellow represents coins
@@ -111,6 +115,8 @@ for (i = 0; i < w; i++) { // cycle through width of image
 			obj = "medium";
 		}else if(r == 255 && g == 255 && b == 3){ // cyan represents shooter vertical
 			obj = "hard";
+		}else if(r == 255 && g == 255 && b == 10){ // cyan represents shooter vertical
+			obj = "multiplayer";
 		}else if(r == 255 && g == 255 && b == 5){ // cyan represents shooter vertical
 			pithon = true;
 			obj = obj_wall;
@@ -145,6 +151,12 @@ for (i = 0; i < w; i++) { // cycle through width of image
 				rm_controller.coins = 20;
 				rm_controller.room_time = 20;
 				rm_controller.alarm[0] = room_speed * rm_controller.room_time;
+				
+				global.w = c_orange;
+				
+				obj = obj_wall;
+			}else if(obj == "multiplayer"){
+				rm_controller = instance_create_layer(x, y, "inst_Controllers", obj_room_controller);
 				
 				global.w = c_orange;
 				

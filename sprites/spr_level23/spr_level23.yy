@@ -69,7 +69,7 @@
   ],
   "parent": {
     "name": "medium",
-    "path": "folders/Sprites/levels/medium.yy",
+    "path": "folders/Sprites/levels/singleplayer/medium.yy",
   },
   "resourceVersion": "1.0",
   "name": "spr_level23",

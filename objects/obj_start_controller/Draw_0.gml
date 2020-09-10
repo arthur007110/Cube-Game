@@ -13,7 +13,7 @@ draw_text_transformed(room_width/1.5, room_height/3,"Alpha!", text_size/4, text_
 
 draw_set_color(c_white);
 
-draw_text_transformed(room_width/2, (room_height/2) + 200,"Press Start", text_size * 0.35, text_size * 0.35, 0);
+//draw_text_transformed(room_width/2, (room_height/2) + 200,"Press Start", text_size * 0.35, text_size * 0.35, 0);
 
 draw_set_halign(fa_left);
 
