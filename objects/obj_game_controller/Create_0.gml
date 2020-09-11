@@ -10,10 +10,16 @@ global.paused = false;
 
 global.level = 0;
 
-global.gamemode = "versus";
+global.gamemode = noone;
 
 global.multiplayer = true;
 
-global.colorP1 = c_red;
+skin_to_assign = noone;
 
-global.colorP2 = c_blue;
+global.skinP1 = noone;
+
+global.skinP2 = noone;
+
+global.colorP1 = noone;
+
+global.colorP2 = noone;

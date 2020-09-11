@@ -52,8 +52,13 @@ if(global.multiplayer){
 			}
 		}
 	}
-	total_player1 = count_p1 / (instance_number(obj_spray)/2);
-	total_player2 = count_p2 / (instance_number(obj_spray)/2);
+	if(!stage_clear){
+		total_player1 = count_p1 / (instance_number(obj_spray)/2);
+		total_player2 = count_p2 / (instance_number(obj_spray)/2);
+	}else if(alarm_get(2) / room_speed > 0.02){
+		alarm[2]++;
+	}
+	
 }
 if(total_player1 == 1 && win == ""){ 
 	win = "Player 1";

@@ -202,5 +202,6 @@ for (i = 0; i < w; i++) { // cycle through width of image
     }
 }
 
-scr_load_game(); // load game
+if(!global.multiplayer)scr_load_game(); // load game
+
 surface_free(surf); // free the surface from memory

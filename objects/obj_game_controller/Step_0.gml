@@ -18,6 +18,24 @@ if(room == rm_level){
 		audio_sound_gain(music, music_volume, 0);
 	}
 }
+if(room == rm_start){
+	if(global.multiplayer) global.multiplayer = 0;
+}
+
+if(!global.multiplayer){
+	global.gamemode = noone;
+
+	skin_to_assign = noone;
+
+	global.skinP1 = noone;
+
+	global.skinP2 = noone;
+
+	global.colorP1 = noone;
+
+	global.colorP2 = noone;
+}
+
 if(global.paused){
 	if(!instance_exists(obj_button_resume_game)){
 		instance_create_layer(room_width/2, 200, "inst_Menu", obj_button_resume_game);

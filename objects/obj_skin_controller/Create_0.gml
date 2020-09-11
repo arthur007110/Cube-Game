@@ -4,6 +4,14 @@ coins = 0;
 player_skin  = spr_player;
 spray_color = c_red;
 
+if(global.multiplayer){
+	if(global.skinP1 == noone){
+		text_player = "Player 1 Choose Skin";
+	}else if(global.skinP2 == noone){
+		text_player = "Player 2 Choose Skin";
+	}
+}
+
 scr_load_game();
 
 h_gap_skins = (room_width - 400)/4;
@@ -51,6 +59,7 @@ for(var i = 0; i < 8; i++){
 		}
 	}
 }
+if(global.multiplayer) exit;
 index = 0;
 for(var i = 0; i < 8; i++){
 	for(var j = 0; j < 5; j++){

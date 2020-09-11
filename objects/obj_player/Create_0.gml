@@ -28,3 +28,7 @@ var ii, jj;
 	}
 	
 p_light = noone;
+
+if(global.multiplayer){
+	player_skin = global.skinP1;
+}

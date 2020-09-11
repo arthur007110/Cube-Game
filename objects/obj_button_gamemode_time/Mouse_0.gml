@@ -3,4 +3,4 @@
 global.multiplayer = true;
 global.gamemode = "time";
 
-scr_sidefade(rm_multiplayer_skin_selection, 2);
+scr_sidefade(rm_skin_selection, 2);

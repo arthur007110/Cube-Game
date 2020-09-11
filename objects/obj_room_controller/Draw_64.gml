@@ -37,7 +37,7 @@ if(!global.multiplayer){
 	
 	if(alarm_get(2)/ room_speed > 5){
 		draw_text_border_transformed(room_width/2, 30, alarm_get(2)/ room_speed, c_green, c_black, 2, 1, 1, 0, 1);
-	}else if(alarm_get(2)/ room_speed > 0){
+	}else if(alarm_get(2)/ room_speed > 0.02){
 		draw_text_border_transformed(room_width/2, 30, alarm_get(2)/ room_speed, c_red, c_black, 2, 1, 1, 0, 1);
 	}else{
 		draw_text_border_transformed(room_width/2, 30, 0, c_red, c_black, 2, 1, 1, 0, 1);

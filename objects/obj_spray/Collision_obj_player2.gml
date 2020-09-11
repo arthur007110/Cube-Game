@@ -7,5 +7,9 @@ paitend_by = "player2";
 if(!global.multiplayer){
 	image_blend = obj_game_controller.spray_color;
 }else{
-	image_blend = global.colorP2;
+	if(global.colorP2 == noone){
+		image_blend = make_color_rgb(150, 150, 150);
+	}else{
+		image_blend = global.colorP2;
+	}
 }

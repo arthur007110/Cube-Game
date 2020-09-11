@@ -1,11 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(!locked){
+if(!locked && !global.multiplayer){
 	scr_select_skin(skin);
 
 	obj_skin_controller.player_skin = skin;
 }
-if(locked && obj_skin_controller.coins >= skin_price){
+
+if(!locked && global.multiplayer){
+	obj_game_controller.skin_to_assign = skin;
+}
+
+if(locked && obj_skin_controller.coins >= skin_price && !global.multiplayer){
 	
 	audio_play_sound(snd_button_confirmed, 1, 0);
 	obj_skin_controller.coins -= skin_price;

@@ -19,7 +19,6 @@ if(size == 1){
 if(sprite_index != skin){
 	sprite_index = skin;
 }
-
 if(locked){
 	var m_size, key, j, skins_map;
 	skins_map = obj_skins.skins_map;

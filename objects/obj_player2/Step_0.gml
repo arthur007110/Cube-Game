@@ -35,7 +35,7 @@ if(p_light == noone){
 				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_blue);
 				break;
 			default:
-				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_red);
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_white);
 				break;
 		}
 	}
