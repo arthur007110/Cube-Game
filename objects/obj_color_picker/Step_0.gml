@@ -21,4 +21,20 @@ if(light == noone && p_color != noone){
 
 image_angle = angle;
 
-angle-= 2;
+if(turn_right){
+	angle-= turn_factor;
+}else{
+	angle+= turn_factor;
+}
+
+if(turn_factor < 5 && turn_right){
+	turn_factor += 0.1;
+}else if(turn_factor > 1 && !turn_right){
+	turn_factor -= 0.1;
+}
+
+if(turn_factor >= 5 && alarm_get(0) == -1){
+	alarm[0] = room_speed;
+}else if(turn_factor <= 1 && alarm_get(1) == -1){
+	alarm[1] = room_speed;
+}

@@ -8,7 +8,7 @@ if(decrease){
 	size -= 0.05;
 }
 
-if(size == 1.5){
+if(size == 1.15){
 	increase = false;
 }
 

@@ -1,5 +1,8 @@
 /// @description Insert description here
 // You can write your code in this editor
+
+picked_colors = false;
+
 randomize();
 
 colorp1 = choose(c_green, c_red, c_blue);

@@ -5,3 +5,9 @@ p_color = noone;
 light = noone;
 
 angle = 0;
+
+turn_right = 0;
+
+turn_factor = 1;
+
+alarm[0] = 1;
