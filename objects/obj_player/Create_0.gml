@@ -1,6 +1,12 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+//start coordinades
+start_x = x;
+start_y = y;
+
+can_move = true;
+
 //velocity
 velocity = 25;
 

@@ -10,6 +10,12 @@ global.paused = false;
 
 global.level = 0;
 
+global.tutorial = true;
+
+global.repeat_tutorial = false;
+
+global.tutorial_level = 0;
+
 global.gamemode = noone;
 
 global.multiplayer = true;
@@ -23,3 +29,5 @@ global.skinP2 = noone;
 global.colorP1 = noone;
 
 global.colorP2 = noone;
+
+scr_check_tutorial();

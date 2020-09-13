@@ -1,6 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
-if(global.paused){ 
+if(global.paused || !can_move){ 
 	hspeed = 0;
 	vspeed = 0;
 	exit;
@@ -47,7 +47,7 @@ sprite_index = player_skin;
 
 //check inputs
 
-if(!in_move){
+if(!in_move && can_move){
 	if(keyboard_check_pressed(ord("A"))){
 		h_move = -velocity;
 		v_move = 0;

@@ -12,7 +12,7 @@ if(passable && obstacle != noone){
 	instance_destroy(obstacle);
 	obstacle = noone;
 }
-if(!passable && obstacle == noone && !place_meeting(x, y, obj_player)){
+if(!passable && obstacle == noone && !place_meeting(x, y, obj_player) && !place_meeting(x, y, obj_player2)){
 	obstacle = instance_create_depth(x, y, -100, obj_obstacle);
 }
 

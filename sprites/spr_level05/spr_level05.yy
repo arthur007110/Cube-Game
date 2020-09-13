@@ -60,7 +60,7 @@
     "eventStubScript": null,
     "parent": {"name":"spr_level05","path":"sprites/spr_level05/spr_level05.yy",},
     "resourceVersion": "1.3",
-    "name": "",
+    "name": "spr_level05",
     "tags": [],
     "resourceType": "GMSequence",
   },

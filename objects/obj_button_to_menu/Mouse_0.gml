@@ -3,5 +3,6 @@
 if show_question("Want to go to start?")
 {
 	global.paused = false;
+	global.repeat_tutorial = false;
 	scr_sidefade(rm_start, 2);
 }

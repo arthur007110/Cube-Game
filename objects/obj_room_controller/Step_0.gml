@@ -61,18 +61,15 @@ if(global.multiplayer){
 	}else if(alarm_get(2) / room_speed > 0.02){
 		alarm[2]++;
 	}
-	
-}
-if(total_player1 == 1 && win == ""){ 
-	win = "Player 1";
-	stage_clear = 1;
-	obj_room_mananger.stage_clear = 1;
-	obj_room_mananger.alarm[1] = room_speed * 2;
-	
-}else if(total_player2 == 1 && win == ""){ 
-	win = "Player 2";
-	stage_clear = 1;
-	obj_room_mananger.stage_clear = 1;
-	obj_room_mananger.alarm[1] = room_speed * 2;
-	
+	if(total_player1 == 1 && win == ""){ 
+		win = "Player 1";
+		stage_clear = 1;
+		obj_room_mananger.stage_clear = 1;
+		obj_room_mananger.alarm[1] = room_speed * 2;
+	}else if(total_player2 == 1 && win == ""){ 
+		win = "Player 2";
+		stage_clear = 1;
+		obj_room_mananger.stage_clear = 1;
+		obj_room_mananger.alarm[1] = room_speed * 2;
+	}
 }

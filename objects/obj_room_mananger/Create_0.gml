@@ -1,10 +1,16 @@
 /// @description Insert description here
 // You can write your code in this editor
 
+randomize();
+
 stage_clear = false;
 text_clear_x = -400;
 
+can_show_tutorial = true;
+
 text_clear = "Stage Clear!";
+
+level_leaded = false;
 
 pithon = false;
 
@@ -28,47 +34,94 @@ while(!contrast){
 	}
 }*/
 /// Create Event of level generator object
-var img, w, h, cell_w, cell_h, surf, i, j, col, obj; // init vars
+var img, w, h, cell_w, cell_h, surf, i, j, col, obj, random_level = false; // init vars
 
-//choose betwen normal level or bônus level
-chance = irandom(99);
+if(!global.multiplayer){
+	
+	if(global.tutorial || global.repeat_tutorial){
+		switch(global.tutorial_level){
+			case 0:
+				level_spr = spr_tutorial01;
+				break;
+			case 1:
+				level_spr = spr_tutorial02;
+				break;
+			case 2:
+				level_spr = spr_tutorial03;
+				break;
+			case 3:
+				level_spr = spr_tutorial04;
+				break;
+			case 4:
+				level_spr = spr_tutorial05;
+				break;
+			case 5:
+				level_spr = spr_tutorial06;
+				break;
+		}
+		
+	}else{
+		//choose betwen normal level or bônus level
+		chance = irandom(99);
 
-if(chance < 20){
-	//choose a random bônus level
-	level_spr = choose(
-	//bônus levels
-	spr_level_bonus01,
-	spr_level_bonus02,
-	spr_level_bonus03
-	);
-}else{
-	level_spr = choose(
-	//levels
-	spr_level01,
-	spr_level03,
-	spr_level04,
-	spr_level05,
-	spr_level06,
-	spr_level07,
-	spr_level08,
-	spr_level09,
-	spr_level10,
-	spr_level11,
-	spr_level12,
-	spr_level13,
-	spr_level14,
-	spr_level15,
-	spr_level16,
-	spr_level17,
-	spr_level18,
-	spr_level19,
-	spr_level20,
-	spr_level21,
-	spr_level22,
-	spr_level23
-	);
+		if(chance < 20){
+			//choose a random bônus level
+			level_spr = choose(
+			//bônus levels
+			spr_level_bonus01,
+			spr_level_bonus02,
+			spr_level_bonus03
+			);
+		}else{
+			random_level = true;
+		}
+	}
 }
-img = spr_level_test_multiplayer; // image in which a level will be generated from
+
+if(global.multiplayer){
+	switch(global.gamemode){
+		case "versus":
+			level_spr = choose(
+			//versus levels
+			spr_level01mv,
+			spr_level02mv,
+			spr_level03mv
+			);
+		break;
+		case "time":
+			random_level = true;
+		break;
+	}
+}
+if(random_level){
+	level_spr = choose(
+		//levels
+		spr_level01,
+		spr_level03,
+		spr_level04,
+		spr_level05,
+		spr_level06,
+		spr_level07,
+		spr_level08,
+		spr_level09,
+		spr_level10,
+		spr_level11,
+		spr_level12,
+		spr_level13,
+		spr_level14,
+		spr_level15,
+		spr_level16,
+		spr_level17,
+		spr_level18,
+		spr_level19,
+		spr_level20,
+		spr_level21,
+		spr_level22,
+		spr_level23
+		);	
+}
+
+img = level_spr; // image in which a level will be generated from
 w = sprite_get_width(img); // image width
 h = sprite_get_height(img); // image height
 
@@ -98,7 +151,11 @@ for (i = 0; i < w; i++) { // cycle through width of image
 		}else if(r == 255 && g == 255 && b == 255){ // white represents player
 			obj = obj_player;
 		}else if(r == 150 && g == 150 && b == 150){ // white represents player
-			obj = obj_player2;
+			if(global.multiplayer){
+				obj = obj_player2;
+			}else{
+				obj = obj_spray;
+			}
 		}else if(r == 0 && g == 255 && b == 0){ // green represents fade walls
 			obj = obj_fade_wall;
 		}else if(r == 255 && g == 255 && b == 0){ // yellow represents coins
@@ -201,6 +258,8 @@ for (i = 0; i < w; i++) { // cycle through width of image
         }
     }
 }
+
+level_leaded = true;
 
 if(!global.multiplayer)scr_load_game(); // load game
 
