@@ -17,7 +17,7 @@ scr_load_game();
 h_gap_skins = (room_width - 400)/4;
 v_gap_skins = (room_height - 300)/4;
 
-h_gap_colors = (room_width - 600)/2;
+h_gap_colors = (room_width - 600)/4;
 
 skins = [
 spr_player,
@@ -41,6 +41,8 @@ colors = [
 "red",
 "blue",
 "green",
+"pink",
+"yellow",
 ];
 
 index = 0;
@@ -48,7 +50,7 @@ for(var i = 0; i < 8; i++){
 	for(var j = 0; j < 5; j++){
 		try{
 			if(skins[index] != noone){
-				obj = instance_create_depth((j * h_gap_skins) + 200, (i * v_gap_skins) + 250, -100, obj_button_skin_selection);
+				obj = instance_create_depth((j * h_gap_skins) + 200 - 32, (i * v_gap_skins) + 250, -100, obj_button_skin_selection);
 				obj.skin = skins[index];
 				obj.skin_id = index+1;
 				index++;
@@ -65,7 +67,7 @@ for(var i = 0; i < 8; i++){
 	for(var j = 0; j < 5; j++){
 		try{
 			if(colors[index] != noone){
-				obj = instance_create_depth((j * h_gap_colors) + 300, room_height - 150, -100, obj_button_color_selection);
+				obj = instance_create_depth((j * h_gap_colors) + 300 - 24, room_height - 150, -100, obj_button_color_selection);
 				obj.b_color = colors[index];
 				index++;
 			}

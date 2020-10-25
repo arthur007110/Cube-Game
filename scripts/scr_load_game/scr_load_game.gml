@@ -44,9 +44,17 @@ function scr_load_game(){
 				case "blue":
 					blend = c_blue;
 					break;
+				case "pink":
+					blend = c_fuchsia;
+					break;
+				case "yellow":
+					blend = c_yellow;
+					break;
 			}
 			
 			obj_game_controller.spray_color = blend;
+			
+			global.level = ini_read_real("savegame", "level", 0);
 		}
 		ini_close();
 	}else{

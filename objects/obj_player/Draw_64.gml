@@ -9,8 +9,10 @@ if(!global.multiplayer){
 	draw_set_valign(fa_top);
 
 	draw_set_color(c_yellow);
-
+	
 	draw_text_transformed(room_width, 0, "c$:" + string(coins), 0.3, 0.3, 0);
+	draw_text_transformed(room_width, 30, "restarts:" + string(global.skips_number), 0.3, 0.3, 0);
+
 }else{
 	draw_set_color(global.colorP1);
 	

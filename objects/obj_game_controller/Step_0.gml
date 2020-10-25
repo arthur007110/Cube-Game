@@ -51,3 +51,39 @@ if(global.paused){
 		instance_destroy(obj_button_to_menu);
 	}
 }
+
+if(global.levels_to_gain_skip == 0){
+	global.skips_number++;
+	global.levels_to_gain_skip = 4;
+}
+
+
+if(keyboard_check_pressed(vk_up)){
+	code += "U"
+}
+if(keyboard_check_pressed(vk_down)){
+	code += "D"
+}
+if(keyboard_check_pressed(vk_right)){
+	code += "R"
+}
+if(keyboard_check_pressed(vk_left)){
+	code += "L"
+}
+if(keyboard_check_pressed(ord("B"))){
+	code += "B"
+}
+if(keyboard_check_pressed(ord("A"))){
+	code += "A"
+}
+
+if(string_length (code) > 10){
+	code = string_delete(code, 1, 1);
+	code = string_delete(code, 1, 1);
+}
+if(code == coins_code && room == rm_skin_selection && !global.multiplayer){
+	if(instance_exists(obj_skin_controller)){
+		obj_skin_controller.coins += 5000;
+	}
+	code = ""
+}

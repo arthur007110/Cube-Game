@@ -1,7 +1,11 @@
-/// @description Insert description here
+ /// @description Insert description here
 // You can write your code in this editor
 
 randomize();
+
+can_skip = false;
+
+alarm[2] = room_speed;
 
 stage_clear = false;
 text_clear_x = -400;
@@ -60,7 +64,7 @@ if(!global.multiplayer){
 				break;
 		}
 		
-	}else{
+	}else if(global.random_mode){
 		//choose betwen normal level or bônus level
 		chance = irandom(99);
 
@@ -75,10 +79,61 @@ if(!global.multiplayer){
 		}else{
 			random_level = true;
 		}
+		if(random_level){
+			level_spr = choose(
+				//levels
+				spr_level13,
+				spr_level12,
+				spr_level05,
+				spr_level14,
+				spr_level11,
+				spr_level10,
+				spr_level22,
+				spr_level06,
+				spr_level04,
+				spr_level03,
+				spr_level20,
+				spr_level23,
+				spr_level21,
+				spr_level01,
+				spr_level08,
+				spr_level07,
+				spr_level19,
+				spr_level16,
+				spr_level09,
+				spr_level18,
+				spr_level15,
+				spr_level17
+				);	
+		}
+	}else{
+		levels = [
+			spr_level13,
+			spr_level12,
+			spr_level05,
+			spr_level14,
+			spr_level11,
+			spr_level10,
+			spr_level22,
+			spr_level06,
+			spr_level04,
+			spr_level03,
+			spr_level20,
+			spr_level23,
+			spr_level21,
+			spr_level01,
+			spr_level08,
+			spr_level07,
+			spr_level19,
+			spr_level16,
+			spr_level09,
+			spr_level18,
+			spr_level15,
+			spr_level17
+		];
+		level_spr = levels[global.selected_level-1]; // image in which a level will be generated from
 	}
-}
-
-if(global.multiplayer){
+}else{
 	switch(global.gamemode){
 		case "versus":
 			level_spr = choose(
@@ -93,35 +148,11 @@ if(global.multiplayer){
 		break;
 	}
 }
-if(random_level){
-	level_spr = choose(
-		//levels
-		spr_level01,
-		spr_level03,
-		spr_level04,
-		spr_level05,
-		spr_level06,
-		spr_level07,
-		spr_level08,
-		spr_level09,
-		spr_level10,
-		spr_level11,
-		spr_level12,
-		spr_level13,
-		spr_level14,
-		spr_level15,
-		spr_level16,
-		spr_level17,
-		spr_level18,
-		spr_level19,
-		spr_level20,
-		spr_level21,
-		spr_level22,
-		spr_level23
-		);	
-}
+
+if(level_spr == noone) show_error("FATAL ERROR: Null Level", true);
 
 img = level_spr; // image in which a level will be generated from
+
 w = sprite_get_width(img); // image width
 h = sprite_get_height(img); // image height
 

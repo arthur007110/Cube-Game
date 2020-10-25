@@ -26,6 +26,6 @@ if(text_angle == -15){
 
 if(hue >= 255) hue = 0;
 
-hue += 0.5;
+hue += 2;
 
 audio_sound_gain(snd_main_theme, music_volume, 0);

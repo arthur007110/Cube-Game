@@ -26,6 +26,12 @@ switch(b_color){
 	case "blue":
 		image_blend = c_blue;
 		break;
+	case "pink":
+		image_blend = c_fuchsia;
+		break;
+	case "yellow":
+		image_blend = c_yellow;
+		break;
 }
 
 if(locked){

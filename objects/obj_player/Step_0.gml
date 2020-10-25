@@ -19,6 +19,12 @@ if(p_light == noone){
 			case c_blue:
 				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_blue);
 				break;
+			case c_fuchsia:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_pink);
+				break;
+			case c_yellow:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_yellow);
+				break;
 			default:
 				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_red);
 				break;
@@ -33,6 +39,12 @@ if(p_light == noone){
 				break;
 			case c_blue:
 				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_blue);
+				break;
+			case c_fuchsia:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_pink);
+				break;
+			case c_yellow:
+				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_yellow);
 				break;
 			default:
 				p_light = instance_create_layer(x, y, "inst_Player", obj_player_light_white);

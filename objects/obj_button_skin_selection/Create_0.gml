@@ -9,7 +9,7 @@ locked = true;
 
 skin = 0;
 
-skin_price = 450;
+skin_price = 750;
 
 skin_id = -1;
 

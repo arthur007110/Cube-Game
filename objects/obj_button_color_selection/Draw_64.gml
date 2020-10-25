@@ -22,7 +22,7 @@ if(locked){
 }else if(b_color == obj_skin_controller.spray_color){
 	draw_set_color(c_white);
 	
-	draw_set_alpha(0.6);
+	draw_set_alpha(1);
 	
 	draw_rectangle_width(x - 6, y - 6, x + sprite_width + 5, y + sprite_height + 5, 5);
 	

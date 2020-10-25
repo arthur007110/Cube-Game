@@ -22,22 +22,22 @@ function lighting_global() {
 	//	#####################################
 
 	// Ambient shadow level
-	global.ambientShadowIntensity = 0.7;
+	global.ambientShadowIntensity = 0.75;
 
 	// Whether the shadow caster's collision mask is used to cull it against lights (true) or not (false)
 	// A polygon must be assigned to the shadow caster regardless, this is only for efficient culling
 	// If true, culling uses an R-tree algorithm
-	global.shadowCastersCullByCollisionMask = true;
+	global.shadowCastersCullByCollisionMask = false;
 
 	// The maximum size allowed for unique light shadow map surfaces
 	// If this is exceeded, the light will use the global light shadow map
 	// Lights that don't cast shadows will especially benefit from this
 	// This does NOT apply to area lights
-	global.lightMaxUniqueShadowMapSize = 1024;
+	global.lightMaxUniqueShadowMapSize = 512;
 
 	// Delay in frames between light updates
 	// You can force the lighting system to update with lighting_set_dirty(true)
-	global.lightUpdateFrameDelay = 1;
+	global.lightUpdateFrameDelay = 2;
 
 	// Set this to true to debug shadow casters
 	// This will draw all polygons

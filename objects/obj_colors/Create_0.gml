@@ -13,6 +13,8 @@ colors = [
 "red",
 "blue",
 "green",
+"pink",
+"yellow",
 ];
 
 

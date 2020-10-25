@@ -4,6 +4,7 @@ if(!file_exists("savedata.ini") || !file_exists("skins_map.sav")){
 	ini_open("savedata.ini");
 	
 	ini_write_real("savegame", "coins", 0);
+	ini_write_real("savegame", "level", 0);
 	ini_write_string("savegame", "player_sprite", sprite_get_name(spr_player));
 	ini_write_real("savegame", "tutorial", 1);
 	

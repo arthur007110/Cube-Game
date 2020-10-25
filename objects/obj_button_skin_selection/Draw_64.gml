@@ -37,7 +37,7 @@ if(locked){
 }else if(skin == obj_game_controller.skin_to_assign && global.multiplayer){
 	draw_set_color(c_aqua);
 
-	draw_rectangle_width(x - 5, y - 5, x + 63 + 5, y + 63 + 5, 2);
+	draw_rectangle_width(x - 5, y - 5, x + 62 + 5, y + 62 + 5, 2);
 	
 	draw_set_color(c_lime);
 	draw_text_transformed(x, y, skin_id, 0.5, 0.5, 0);

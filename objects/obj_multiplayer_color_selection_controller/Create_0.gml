@@ -11,7 +11,7 @@ colorp2 = noone;
 
 
 while(true){
-	color = choose(c_green, c_red, c_blue);
+	color = choose(c_green, c_red, c_blue, c_fuchsia, c_yellow);
 	
 	if(color != colorp1){
 		colorp2 = color;

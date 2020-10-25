@@ -9,6 +9,6 @@ locked = true;
 
 b_color = "red";
 
-color_price = 1500;
+color_price = 2500;
 
 depth = 1;

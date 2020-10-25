@@ -7,6 +7,7 @@ if(stage_clear){
 	//draw_set_halign(fa_readonly);
 	draw_set_valign(fa_center);
 	if(!global.multiplayer){
+		draw_set_color(c_white);
 		draw_text_transformed(text_clear_x, room_height/2,"Stage Clear!", 1, 1, 0);
 	}else{
 		
@@ -28,4 +29,8 @@ if(stage_clear){
 			draw_text_transformed(text_clear_x, room_height/2, obj_room_controller.win, 1, 1, 0);
 		}
 	}
+}
+
+if(!global.multiplayer){
+	
 }

@@ -6,5 +6,8 @@ if(instance_exists(obj_room_mananger)){
 }else{
 	image_blend = c_ltgray;
 }
+if(room == rm_start){
+	image_blend = make_color_rgb(46, 46, 131);
+}
 
 obstacle = noone;

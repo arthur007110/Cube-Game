@@ -13,6 +13,12 @@ if(light == noone && p_color != noone){
 			case c_blue:
 				light = instance_create_layer(x, y, "inst_Player", obj_player_light_blue);
 				break;
+			case c_fuchsia:
+				light = instance_create_layer(x, y, "inst_Player", obj_player_light_pink);
+				break;
+			case c_yellow:
+				light = instance_create_layer(x, y, "inst_Player", obj_player_light_yellow);
+				break;
 			default:
 				light = instance_create_layer(x, y, "inst_Player", obj_player_light_white);
 				break;
